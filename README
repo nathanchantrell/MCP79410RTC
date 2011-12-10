@@ -1,0 +1,7 @@
+//---------------------------------------------------------------------------------
+// Read and write time and date from MCP79410 RTC
+// Returns time in format hh:mm:ss and date in dd:mm:yy
+// by Nathan Chantrell. http://zorg.org/
+// Based on http://web.icedsl.hu/enicke/mcprtc/mcpcode.html
+//---------------------------------------------------------------------------------
+
