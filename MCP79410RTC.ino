@@ -39,18 +39,18 @@ void loop(){
 unsigned char ReadRTCByte(const unsigned char adr){
   unsigned char data;
   Wire.beginTransmission(0x6f);
-  Wire.send(adr);
+  Wire.write(adr);
   Wire.endTransmission();
   Wire.requestFrom(0x6f,1);
-  while (Wire.available()) data=Wire.receive();
+  while (Wire.available()) data=Wire.read();
   return data;
 }
 
 // Called to write bytes to RTC
 void WriteRTCByte(const unsigned char adr, const unsigned char data){
   Wire.beginTransmission(0x6f);
-  Wire.send(adr);
-  Wire.send(data);
+  Wire.write(adr);
+  Wire.write(data);
   Wire.endTransmission();
 } 
 
